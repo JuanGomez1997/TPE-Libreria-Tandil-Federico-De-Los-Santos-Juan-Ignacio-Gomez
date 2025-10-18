@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-09-2025 a las 00:35:20
+-- Tiempo de generación: 18-10-2025 a las 07:24:03
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -32,6 +32,16 @@ CREATE TABLE `generos` (
   `nombre` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `generos`
+--
+
+INSERT INTO `generos` (`id_genero`, `nombre`) VALUES
+(1, 'Accion'),
+(2, 'Aventura'),
+(3, 'Ciencia Ficcion'),
+(4, 'Terror');
+
 -- --------------------------------------------------------
 
 --
@@ -48,6 +58,16 @@ CREATE TABLE `libro` (
   `disponibilidad` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `libro`
+--
+
+INSERT INTO `libro` (`id_libro`, `titulo`, `genero_id`, `autor`, `anio`, `descripcion`, `disponibilidad`) VALUES
+(3, 'Harry Potter 1', 3, 'J. K. Rowling', '2015-10-01', 'Harry Potter se ha quedado huérfano y vive en casa de sus abominables tíos y el insoportable primo Dudley. Harry se siente muy triste y solo, hasta que un buen día recibe una carta que cambiará su vida para siempre. ', 1),
+(4, 'La máquina del tiempo ', 4, 'Herbert George Wells', '2015-10-08', 'El pionero H.G. Wells escribió este absoluto clásico del género, que no se entretiene demasiado en las cuestiones técnicas (nunca sabemos cuál es la teoría de los viajes en el tiempo o cómo funciona la máquina), y que va al grano con lo que le interesa: la aventura de exploración futura y el adoctrinamiento de sus lectores. El retrato de una sociedad futura dividida entre gente hipersensible y mostrencos monstruosos es fascinante, y términos como \'Morlock\' han pasado al acervo popular.', 0),
+(7, 'Al límite de la cordura', 2, 'Lorena Franco', '2018-10-17', 'La tercera parte de la emocionante serie Chloe Bennett, sumerge al lector en un mundo donde el misterio y la emoción se entrelazan magistralmente. Franco, una escritora de renombre en el ámbito de la literatura de aventuras y ficción, crea una trama absorbente y personajes que capturan la imaginación y los corazones de sus lectores. ¿Hasta dónde estarías dispuesto a ir para descubrir la verdad detrás de la cordura?', 1),
+(8, 'La última revelación', 2, 'Fernando Gamboa', '2019-10-30', '¿Te imaginas una aventura donde la historia y el misterio se entrelazan de manera fascinante? La tercera entrega de Las aventuras de Ulises Vidal ofrece justamente eso. Tras ser desacreditados por la comunidad científica, Ulises, Cassie y el profesor Castillo se embarcan en un viaje repleto de acción para recuperar su honor. Esta novela te sumerge en un mundo donde la búsqueda de pruebas sobre la presencia nazi en la Ciudad Negra se convierte en una aventura que desafía la imaginación. ', 0);
+
 -- --------------------------------------------------------
 
 --
@@ -59,6 +79,13 @@ CREATE TABLE `usuarios` (
   `usuario` text NOT NULL,
   `contrasenia` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `usuario`, `contrasenia`) VALUES
+(1, 'webadmin', '$2y$10\\$ztUuk38KaDsp/yCmrF0/w.3TSRvvzp153ZLOjT3hj9cF6xFcDnrDK');
 
 --
 -- Índices para tablas volcadas
@@ -75,7 +102,7 @@ ALTER TABLE `generos`
 --
 ALTER TABLE `libro`
   ADD PRIMARY KEY (`id_libro`),
-  ADD UNIQUE KEY `genero` (`genero_id`);
+  ADD KEY `genero` (`genero_id`) USING BTREE;
 
 --
 -- Indices de la tabla `usuarios`
@@ -91,19 +118,19 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `generos`
 --
 ALTER TABLE `generos`
-  MODIFY `id_genero` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_genero` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `libro`
 --
 ALTER TABLE `libro`
-  MODIFY `id_libro` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_libro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Restricciones para tablas volcadas
