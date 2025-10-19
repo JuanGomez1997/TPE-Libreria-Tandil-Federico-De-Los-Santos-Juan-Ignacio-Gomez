@@ -8,7 +8,7 @@
                     <ul class="list-unstyled">
                         <li>Dirección: Siempre viva 742</li>
                         <li>Teléfono: (02494) 4674912</li>
-                        <li>Email: info@supermercado.com</li>
+                        <li>Email: info@libreria.com</li>
                     </ul>
                 </address>
             </div>
