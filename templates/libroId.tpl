@@ -1,5 +1,7 @@
 {include file="encabezado.tpl"}
+{if isset($_SESSION['id'])}
     {include file="formularioLibros.tpl"}
+{/if}
     <table class="table">
         <thead>
             <tr>

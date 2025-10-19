@@ -1,6 +1,7 @@
 <?php
     require_once './app/modelo/modeloLibros.php';
     require_once './app/vista/vistaLibros.php';
+    require_once './app/helpers/helpersAut.php';
     class ControladorLibros{
 
         private $vistaLibro;
@@ -11,18 +12,21 @@
         }
 
         public function listarLibros(){
+            AutHelper::init();
             $libros=$this->modeloLibro->obtenerLibros();
             $generos=$this->modeloLibro->obtenerGeneros();
             $this->vistaLibro->mostrarLibros($libros,$generos);
         }
 
         public function verLibro($id){
+            AutHelper::init();
             $libros=$this->modeloLibro->obtenerLibroporId($id);
             $generos=$this->modeloLibro->obtenerGeneros();
             $this->vistaLibro->mostrarLibro($id,$libros,$generos);
         }
 
         public function aniadirLibro(){
+            AutHelper::verify();
             if (isset($_POST['titulo']) && isset($_POST['genero'])  && isset($_POST['autor'])  && isset($_POST['anio']) && isset($_POST['descripcion']) && isset($_POST['disponibilidad'])){
                 if (empty($_POST['titulo']) || empty($_POST['genero']) || empty($_POST['autor']) || empty($_POST['anio']) || empty($_POST['descripcion']) || empty($_POST['disponibilidad'])){
                     $this->vistaLibro->mostrarError("Datos incompletos");
@@ -40,6 +44,7 @@
         }
 
         public function editarLibro($id){
+            AutHelper::verify();
             if (isset($_POST['titulo']) && isset($_POST['genero'])  && isset($_POST['autor'])  && isset($_POST['anio']) && isset($_POST['descripcion']) && isset($_POST['disponibilidad'])){
                 if (empty($_POST['titulo']) || empty($_POST['genero']) || empty($_POST['autor']) || empty($_POST['anio']) || empty($_POST['descripcion']) || empty($_POST['disponibilidad'])){
                     $this->vistaLibro->mostrarError("Datos incompletos");
@@ -57,6 +62,7 @@
         }
 
         public function borrarLibro($id){
+            AutHelper::verify();
             $this->modeloLibro->eliminarLibro($id);
             header("Location: ". BASE_URL);
         }

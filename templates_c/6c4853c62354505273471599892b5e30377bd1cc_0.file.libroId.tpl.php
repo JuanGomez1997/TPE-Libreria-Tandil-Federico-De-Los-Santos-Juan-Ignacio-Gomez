@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2025-10-19 06:28:38
+/* Smarty version 4.2.1, created on 2025-10-19 07:25:25
   from 'D:\cosa\htdocs\web2025\TPE\TPE-Libreria-Tandil-Federico-De-Los-Santos-Juan-Ignacio-Gomez\templates\libroId.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_68f468f655fda0_08568102',
+  'unifunc' => 'content_68f47645b98398_25885867',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6c4853c62354505273471599892b5e30377bd1cc' => 
     array (
       0 => 'D:\\cosa\\htdocs\\web2025\\TPE\\TPE-Libreria-Tandil-Federico-De-Los-Santos-Juan-Ignacio-Gomez\\templates\\libroId.tpl',
-      1 => 1760848111,
+      1 => 1760851125,
       2 => 'file',
     ),
   ),
@@ -23,11 +23,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:piePagina.tpl' => 1,
   ),
 ),false)) {
-function content_68f468f655fda0_08568102 (Smarty_Internal_Template $_smarty_tpl) {
+function content_68f47645b98398_25885867 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:encabezado.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?>
+if ((isset($_smarty_tpl->tpl_vars['_SESSION']->value['id_usuario']))) {?>
     <?php $_smarty_tpl->_subTemplateRender("file:formularioLibros.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?>
+}?>
     <table class="table">
         <thead>
             <tr>

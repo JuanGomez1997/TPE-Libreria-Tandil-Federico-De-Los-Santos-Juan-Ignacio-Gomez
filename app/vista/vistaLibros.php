@@ -12,6 +12,7 @@
             $this->smarty->assign('libros',$libros);
             $this->smarty->assign('generos',$generos);
             $this->smarty->assign('opcion','agregar');
+            $this->smarty->assign('_SESSION', $_SESSION);
             $this->smarty->display('listadoLibros.tpl');
         }
 
@@ -20,6 +21,7 @@
             $this->smarty->assign('libros',$libros);
             $this->smarty->assign('generos',$generos);
             $this->smarty->assign('opcion','editar');
+            $this->smarty->assign('_SESSION', $_SESSION);
             $this->smarty->display('libroId.tpl');
         }
 

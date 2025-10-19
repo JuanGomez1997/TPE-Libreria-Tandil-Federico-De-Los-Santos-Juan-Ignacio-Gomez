@@ -1,5 +1,8 @@
 <?php
     require_once './app/controlador/controladorLibros.php';
+    require_once './app/controlador/controladorUsuario.php';
+    require_once './app/helpers/helpersAut.php';
+
     define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']) . '/');
 
     $accion = 'inicio'; 
@@ -28,6 +31,18 @@
         case 'eliminarlibro':
             $controlador= new ControladorLibros;
             $controlador->borrarLibro($params[1]);
+            break;
+        case 'iniciosesion':
+            $controlador= new ControladorUsuario;
+            $controlador->ingreso($params[1]);
+            break;
+        case 'accesosesion':
+            $controlador= new ControladorUsuario;
+            $controlador->accesoSesion($params[1]);
+            break;
+        case 'cerrarsesion':
+            $controlador= new ControladorUsuario;
+            $controlador->cerrarsesion($params[1]);
             break;
         
         default:
