@@ -5,7 +5,7 @@
 
         
         public function obtenerLibros(){
-            $consulta=$this->db->prepare("SELECT * FROM libro");
+            $consulta=$this->db->prepare("SELECT * FROM libro JOIN generos ON libro.genero_id=generos.id_genero");
             $consulta->execute();
             $libros=$consulta->fetchAll(PDO::FETCH_OBJ);
             return $libros;
@@ -30,7 +30,7 @@
         }    
         
         public function eliminarLibro($id_libro){
-            $consulta=$this->db->prepare("DELETE FROM libro WHERE id_genero=?");
+            $consulta=$this->db->prepare("DELETE FROM libro WHERE id_libro=?");
             $consulta->execute([$id_libro]);
         }
         //---------------------------esto no va aca

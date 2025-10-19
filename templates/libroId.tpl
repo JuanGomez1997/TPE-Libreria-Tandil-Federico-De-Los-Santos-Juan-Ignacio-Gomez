@@ -1,5 +1,5 @@
 {include file="encabezado.tpl"}
-    {include file="formularioProductos.tpl"}
+    {include file="formularioLibros.tpl"}
     <table class="table">
         <thead>
             <tr>
@@ -15,7 +15,7 @@
             {foreach from=$libros item=$libro}
             <tr>
                 <th scope="row">{$libro->titulo}</th>
-                <td>{$libro->genero}</td>
+                <td>{$libro->nombre}</td>
                 <td>{$libro->autor}</td>
                 <td>{$libro->anio}</td>
                 <td>{$libro->descripcion}</td>

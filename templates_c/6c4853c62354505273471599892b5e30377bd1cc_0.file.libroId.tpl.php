@@ -1,32 +1,32 @@
 <?php
-/* Smarty version 4.2.1, created on 2025-10-18 10:46:47
+/* Smarty version 4.2.1, created on 2025-10-19 06:28:38
   from 'D:\cosa\htdocs\web2025\TPE\TPE-Libreria-Tandil-Federico-De-Los-Santos-Juan-Ignacio-Gomez\templates\libroId.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_68f353f76418d0_37993771',
+  'unifunc' => 'content_68f468f655fda0_08568102',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6c4853c62354505273471599892b5e30377bd1cc' => 
     array (
       0 => 'D:\\cosa\\htdocs\\web2025\\TPE\\TPE-Libreria-Tandil-Federico-De-Los-Santos-Juan-Ignacio-Gomez\\templates\\libroId.tpl',
-      1 => 1760773652,
+      1 => 1760848111,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
     'file:encabezado.tpl' => 1,
-    'file:formularioProductos.tpl' => 1,
+    'file:formularioLibros.tpl' => 1,
     'file:piePagina.tpl' => 1,
   ),
 ),false)) {
-function content_68f353f76418d0_37993771 (Smarty_Internal_Template $_smarty_tpl) {
+function content_68f468f655fda0_08568102 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:encabezado.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
-    <?php $_smarty_tpl->_subTemplateRender("file:formularioProductos.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+    <?php $_smarty_tpl->_subTemplateRender("file:formularioLibros.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
     <table class="table">
         <thead>
@@ -49,7 +49,7 @@ $_smarty_tpl->tpl_vars['libro']->do_else = false;
             <tr>
                 <th scope="row"><?php echo $_smarty_tpl->tpl_vars['libro']->value->titulo;?>
 </th>
-                <td><?php echo $_smarty_tpl->tpl_vars['libro']->value->genero;?>
+                <td><?php echo $_smarty_tpl->tpl_vars['libro']->value->nombre;?>
 </td>
                 <td><?php echo $_smarty_tpl->tpl_vars['libro']->value->autor;?>
 </td>

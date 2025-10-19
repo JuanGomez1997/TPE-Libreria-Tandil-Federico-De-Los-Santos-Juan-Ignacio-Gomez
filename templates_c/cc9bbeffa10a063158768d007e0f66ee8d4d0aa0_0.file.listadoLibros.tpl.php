@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2025-10-18 10:46:34
+/* Smarty version 4.2.1, created on 2025-10-19 06:30:23
   from 'D:\cosa\htdocs\web2025\TPE\TPE-Libreria-Tandil-Federico-De-Los-Santos-Juan-Ignacio-Gomez\templates\listadoLibros.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_68f353eaccb1e2_53956278',
+  'unifunc' => 'content_68f4695f8f0299_97075020',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cc9bbeffa10a063158768d007e0f66ee8d4d0aa0' => 
     array (
       0 => 'D:\\cosa\\htdocs\\web2025\\TPE\\TPE-Libreria-Tandil-Federico-De-Los-Santos-Juan-Ignacio-Gomez\\templates\\listadoLibros.tpl',
-      1 => 1760775232,
+      1 => 1760848221,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:piePagina.tpl' => 1,
   ),
 ),false)) {
-function content_68f353eaccb1e2_53956278 (Smarty_Internal_Template $_smarty_tpl) {
+function content_68f4695f8f0299_97075020 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:encabezado.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -45,7 +45,7 @@ $_smarty_tpl->tpl_vars['libro']->do_else = false;
 </h5>
                         <p class="card-text text-muted" >Autor:<?php echo $_smarty_tpl->tpl_vars['libro']->value->autor;?>
 </p>
-                        <p class="card-text text-muted" >Genero:<?php echo $_smarty_tpl->tpl_vars['libro']->value->genero_id;?>
+                        <p class="card-text text-muted" >Genero:<?php echo $_smarty_tpl->tpl_vars['libro']->value->nombre;?>
 </p>
                         <a href="eliminarlibro/<?php echo $_smarty_tpl->tpl_vars['libro']->value->id_libro;?>
 " class="btn btn-outline-danger">Eliminar</a>

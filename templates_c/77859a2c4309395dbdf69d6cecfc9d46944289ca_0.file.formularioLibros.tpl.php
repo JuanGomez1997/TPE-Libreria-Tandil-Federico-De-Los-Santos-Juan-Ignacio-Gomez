@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2025-10-18 10:46:35
+/* Smarty version 4.2.1, created on 2025-10-19 06:17:57
   from 'D:\cosa\htdocs\web2025\TPE\TPE-Libreria-Tandil-Federico-De-Los-Santos-Juan-Ignacio-Gomez\templates\formularioLibros.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_68f353eb2719a4_82669186',
+  'unifunc' => 'content_68f466758f18b7_50434345',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '77859a2c4309395dbdf69d6cecfc9d46944289ca' => 
     array (
       0 => 'D:\\cosa\\htdocs\\web2025\\TPE\\TPE-Libreria-Tandil-Federico-De-Los-Santos-Juan-Ignacio-Gomez\\templates\\formularioLibros.tpl',
-      1 => 1760775231,
+      1 => 1760847468,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_68f353eb2719a4_82669186 (Smarty_Internal_Template $_smarty_tpl) {
+function content_68f466758f18b7_50434345 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="form-card">
     <?php if ($_smarty_tpl->tpl_vars['opcion']->value == 'agregar') {?>
         <h2> Agregar Libro Nuevo</h2>
@@ -63,12 +63,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
         <div class="form-group">
             <label for="descripcion">Descripcion:</label>
-            <input type="text" class="form-control"  name='categoria' placeholder="Descripcion">
+            <input type="text" class="form-control"  name='descripcion' placeholder="Descripcion">
         </div>
         
         <div class="form-group">
             <label for="disponibilidad">Disponibilidad</label>
-            <input type="number" class="form-control"  name='marca' placeholder="Disponibilidad 0/1">
+            <input type="number" class="form-control"  name='disponibilidad' placeholder="Disponibilidad 0/1">
         </div>
         
         <div  class="col-12 text-center">

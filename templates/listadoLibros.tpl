@@ -10,7 +10,7 @@
                     <div class="card-body">
                         <h5 class="card-title">{$libro->titulo}</h5>
                         <p class="card-text text-muted" >Autor:{$libro->autor}</p>
-                        <p class="card-text text-muted" >Genero:{$libro->genero_id}</p>
+                        <p class="card-text text-muted" >Genero:{$libro->nombre}</p>
                         <a href="eliminarlibro/{$libro->id_libro}" class="btn btn-outline-danger">Eliminar</a>
                         <a href="verlibro/{$libro->id_libro}" class="btn btn-outline-success">Ver Libro</a>
                     </div>

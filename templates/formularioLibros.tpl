@@ -30,12 +30,12 @@
 
         <div class="form-group">
             <label for="descripcion">Descripcion:</label>
-            <input type="text" class="form-control"  name='categoria' placeholder="Descripcion">
+            <input type="text" class="form-control"  name='descripcion' placeholder="Descripcion">
         </div>
         
         <div class="form-group">
             <label for="disponibilidad">Disponibilidad</label>
-            <input type="number" class="form-control"  name='marca' placeholder="Disponibilidad 0/1">
+            <input type="number" class="form-control"  name='disponibilidad' placeholder="Disponibilidad 0/1">
         </div>
         
         <div  class="col-12 text-center">
