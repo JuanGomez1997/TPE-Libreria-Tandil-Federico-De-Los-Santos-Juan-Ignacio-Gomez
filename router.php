@@ -34,19 +34,20 @@
             break;
         case 'iniciosesion':
             $controlador= new ControladorUsuario;
-            $controlador->ingreso($params[1]);
+            $controlador->ingreso();
             break;
         case 'accesosesion':
             $controlador= new ControladorUsuario;
-            $controlador->accesoSesion($params[1]);
+            $controlador->accesoSesion();
             break;
         case 'cerrarsesion':
             $controlador= new ControladorUsuario;
-            $controlador->cerrarsesion($params[1]);
+            $controlador->cerrarsesion();
             break;
         
         default:
-            echo "Error!";
+            $controlador= new ControladorUsuario;
+            $controlador->mostrar404();
             break;
     }
 ?>

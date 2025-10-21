@@ -31,3 +31,34 @@ Tabla Generos esta tabla contiene la informacion sobre los generos de los libros
 id_genero:Clave primaria que identifica de forma unica cada genero.
 
 nombre:Nombre del genero.
+
+
+Instrucciones para importar la base de datos y ver la página
+
+1.Inicia Apache y MySQL desde el panel de control de XAMPP.
+
+2.Abre phpMyAdmin en tu navegador.
+
+3.Crea una nueva base de datos llamada libreria tandil.
+
+4.Selecciona la base de datos libreria tandil.
+
+5.Haz clic en la pestaña Importar.
+
+6.Haz clic en Seleccionar archivo y elige el archivo database/libreria_tandil.sql de este proyecto.
+
+7.Presiona Continuar para importar las tablas y datos.
+
+8.Copia o clona el repositorio en la carpeta htdocs de XAMPP .
+
+9.Abre tu navegador y accede a la pagina(como por ejemplo en: http://localhost/TPE-Libreria-Tandil/).
+
+10.Si todo está configurado correctamente, podrás ver la página principal de la librería.
+
+Usuario Administrador
+
+Usuario:webadmin
+
+contraseña:admin
+
+Un usuario normal,podra ver el listado de libros y generos como tambien los libro diponibles. En cambio el usuario administrador tambien podra tener la posibilidad de agregar,editar e eliminar libros y generos.

@@ -14,7 +14,7 @@
           $query = $this->db->query('SHOW TABLES');
           $tables = $query->fetchAll();
           if(count($tables) == 0) {
-            $sql =<<<END
+            $sql =<<<'END'
                       CREATE TABLE `generos` (
                         `id_genero` int(11) NOT NULL,
                         `nombre` text NOT NULL
@@ -73,7 +73,7 @@
                         --
 
                         INSERT INTO `usuarios` (`id`, `usuario`, `contrasenia`) VALUES
-                        (1, 'webadmin', '$2y$10\$ztUuk38KaDsp/yCmrF0/w.3TSRvvzp153ZLOjT3hj9cF6xFcDnrDK');
+                        (1, 'webadmin', '$2b$12$hJLzoFf1I1lT3OOPnaYfguWWYFui7lrKXYUdfbyjGJMMUuLkrRUQm'); 
 
                         --
                         -- Índices para tablas volcadas
@@ -133,6 +133,6 @@
             END;
             $this->db->query($sql);
           }
-        } // la contraseña hasheada es: $2b$12$hJLzoFf1I1lT3OOPnaYfguWWYFui7lrKXYUdfbyjGJMMUuLkrRUQm pero si no le poniaa el "\" me maracaba error
+        } 
       }
 ?>
