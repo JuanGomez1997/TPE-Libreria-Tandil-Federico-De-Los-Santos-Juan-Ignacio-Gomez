@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2025-10-19 07:19:13
+/* Smarty version 4.2.1, created on 2025-10-22 00:36:47
   from 'D:\cosa\htdocs\web2025\TPE\TPE-Libreria-Tandil-Federico-De-Los-Santos-Juan-Ignacio-Gomez\templates\encabezado.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_68f474d12cf588_75240547',
+  'unifunc' => 'content_68f80affe97ff6_89384777',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '585182c40d472d1384d845f632a09063b367639c' => 
     array (
       0 => 'D:\\cosa\\htdocs\\web2025\\TPE\\TPE-Libreria-Tandil-Federico-De-Los-Santos-Juan-Ignacio-Gomez\\templates\\encabezado.tpl',
-      1 => 1760851074,
+      1 => 1761086205,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_68f474d12cf588_75240547 (Smarty_Internal_Template $_smarty_tpl) {
+function content_68f80affe97ff6_89384777 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,7 +43,7 @@ function content_68f474d12cf588_75240547 (Smarty_Internal_Template $_smarty_tpl)
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link text-light" href="">Generos</a>
+                    <a class="nav-link text-light" href="generos">Generos</a>
                     <?php if ((isset($_smarty_tpl->tpl_vars['_SESSION']->value['id']))) {?>
                         <a class="nav-link text-light" href="cerrarsesion">Cerrar Sesion</a>
                     <?php } else { ?>

@@ -19,7 +19,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link text-light" href="">Generos</a>
+                    <a class="nav-link text-light" href="generos">Generos</a>
                     {if isset($_SESSION['id'])}
                         <a class="nav-link text-light" href="cerrarsesion">Cerrar Sesion</a>
                     {else}

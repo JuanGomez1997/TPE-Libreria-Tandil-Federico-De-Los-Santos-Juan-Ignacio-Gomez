@@ -62,3 +62,6 @@ Usuario:webadmin
 contraseña:admin
 
 Un usuario normal,podra ver el listado de libros y generos como tambien los libro diponibles. En cambio el usuario administrador tambien podra tener la posibilidad de agregar,editar e eliminar libros y generos.
+
+NOTA:
+A la hora de importar la base de datos en la tabla usuarios

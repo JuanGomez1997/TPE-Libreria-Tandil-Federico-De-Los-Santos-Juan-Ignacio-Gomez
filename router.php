@@ -2,6 +2,7 @@
     require_once './app/controlador/controladorLibros.php';
     require_once './app/controlador/controladorUsuario.php';
     require_once './app/helpers/helpersAut.php';
+    require_once './app/controlador/controladorGeneros.php';
 
     define('BASE_URL', '//' . $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'] . dirname($_SERVER['PHP_SELF']) . '/');
 
@@ -43,6 +44,30 @@
         case 'cerrarsesion':
             $controlador= new ControladorUsuario;
             $controlador->cerrarsesion();
+            break;
+        case 'generos':
+            $controlador = new ControladorGeneros();
+            $controlador->mostrarGeneros();
+            break;
+
+        case 'libroporgenero':
+            $controlador = new ControladorGeneros();
+            $controlador->mostrarLibroPorGenero($params[1]);
+            break;
+
+        case 'guardarGenero':
+            $controlador = new ControladorGeneros();
+            $controlador->guardarGenero();
+            break;
+
+        case 'actualizarGenero':
+                $controlador = new ControladorGeneros();
+                $controlador->actualizarGenero($params[1]);
+            break;
+
+        case 'eliminarGenero':
+                $controlador = new ControladorGeneros();
+                $controlador->eliminarGenero($params[1]);
             break;
         
         default:
