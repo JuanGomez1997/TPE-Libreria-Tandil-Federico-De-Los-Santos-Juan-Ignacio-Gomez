@@ -33,12 +33,6 @@
             $consulta=$this->db->prepare("DELETE FROM libro WHERE id_libro=?");
             $consulta->execute([$id_libro]);
         }
-        //---------------------------esto no va aca
-        public function obtenerGeneros(){
-            $consulta=$this->db->prepare("SELECT * FROM generos");
-            $consulta->execute();
-            $generos=$consulta->fetchAll(PDO::FETCH_OBJ);
-            return $generos;
-        }
+        
     }
 ?>

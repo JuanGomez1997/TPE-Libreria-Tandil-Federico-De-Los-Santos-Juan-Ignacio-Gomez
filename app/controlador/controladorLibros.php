@@ -2,26 +2,29 @@
     require_once './app/modelo/modeloLibros.php';
     require_once './app/vista/vistaLibros.php';
     require_once './app/helpers/helpersAut.php';
+    require_once './app/modelo/modeloGeneros.php';
     class ControladorLibros{
 
         private $vistaLibro;
-        private $modeloLibro;//habria que hacer otro modelo con el obtener generos
+        private $modeloLibro;
+        private $modeloGeneros;
         public function __construct(){
             $this->vistaLibro= new VistaLibros;
             $this->modeloLibro= new ModeloLibros;
+            $this->modeloGeneros=new Generos;
         }
 
         public function listarLibros(){
             AutHelper::init();
             $libros=$this->modeloLibro->obtenerLibros();
-            $generos=$this->modeloLibro->obtenerGeneros();
+            $generos=$this->modeloGeneros->obtenerGeneros();
             $this->vistaLibro->mostrarLibros($libros,$generos);
         }
 
         public function verLibro($id){
             AutHelper::init();
             $libros=$this->modeloLibro->obtenerLibroporId($id);
-            $generos=$this->modeloLibro->obtenerGeneros();
+            $generos=$this->modeloGeneros->obtenerGeneros();
             $this->vistaLibro->mostrarLibro($id,$libros,$generos);
         }
 
